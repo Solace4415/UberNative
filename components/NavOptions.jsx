@@ -1,4 +1,5 @@
 import { FlatList, Text, TouchableOpacity, View, Image } from "react-native";
+import { Icon } from "react-native-elements/dist/icons/Icon";
 import tw from "tailwind-react-native-classnames";
 
 const data = [
@@ -29,12 +30,19 @@ const NavOptions = () => {
             />
             <Text style={tw`mt-2 text-lg font-semibold `}>{item.title}</Text>
           </View>
+          <Icon
+            type="antdesign"
+            name="arrowright"
+            color="white"
+            style={tw`p-2 bg-black rounded-full w-10 mt-4`}
+          />
         </TouchableOpacity>
       )}
       horizontal
       keyExtractor={(item) => item.id}
     />
   );
+  S;
 };
 
 export default NavOptions;
